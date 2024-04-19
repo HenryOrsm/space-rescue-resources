@@ -56,10 +56,10 @@ class Ship(RoomObject):
         if self.can_shoot:
             new_laser = Laser(self.room, 
                             self.x + self.width, 
-                            self.y + self.height/2 - 4)
+                            self.y + self.height/10 - 4)
             self.room.add_room_object(new_laser)
             self.can_shoot = False
-            self.set_timer(10,self.reset_shot)
+            self.set_timer(0,self.reset_shot)
 
     def reset_shot(self):
         """
